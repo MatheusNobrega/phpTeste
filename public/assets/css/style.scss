@@ -1,0 +1,81 @@
+@import "MPV/mpv.scss";
+@import "footer.scss";
+@import "header.scss";
+
+body {
+  height: 100vh;
+  @include grid(grid, repeat(12, 1fr), 100px auto auto);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: $background-cinza;
+}
+header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  @include grid(grid, repeat(12, 1fr), auto);
+  background: $azulCestari;
+}
+
+main {
+  grid-column: 2/12;
+  grid-row: 2/3;
+  grid-gap: 1rem;
+  @include grid(grid, repeat(12, 1fr), auto auto auto auto);
+  a {
+    color: $azulCestari;
+  }
+}
+
+footer {
+  border-top: 0.1rem solid $azulCestari ;
+  grid-column: 1/13;
+  grid-row: 3/4;
+  @include grid(grid, repeat(12, 1fr), auto auto auto);
+  background: $background-destaque;
+  a {
+    color: $azulCestari;
+    &:hover{
+      color: $azulCestari;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  @include marginPadding(0, 0);
+}
+
+button {
+  border: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+input {
+  text-align: center;
+  outline: none;
+  border: none;
+  border: solid $borda-cor-padrao 0.01rem;
+  padding: 0.3rem;
+} 
+
+select {
+  text-align: center;
+  border: none;
+  border: solid $borda-cor-padrao 0.01rem;
+  padding: 0.3rem;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+i {
+  cursor: pointer;
+}

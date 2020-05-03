@@ -1,0 +1,41 @@
+@import 'style.scss';
+
+.configuracoes{
+  grid-column: 1/13;
+  grid-row: 2/3;
+  @include flex(center,row,space-around);
+  margin: 1.5rem 0;
+}
+
+.configuracao{
+  @include tamanho(18.75rem,24%);
+  @media (max-width:1024px){
+    width: 48%;
+    height: 21.87rem;
+  }
+  @media (max-width:724px){
+    width: 100%;
+  }
+  @include grid(grid, repeat(12, 1fr), repeat(5, 1fr));
+  background: $background-destaque;
+  border: solid 0.1rem $borda-cor-padrao;
+  border-radius: 0.5rem;
+  font-size: 1.0rem;
+  margin: 2rem 0;
+}
+
+.legendaConfiguracao{
+  grid-column: 1/13;
+  grid-row: 5/6;
+  @include flex(center,row,space-around)
+}
+
+.imagemConfiguracao{
+  grid-column: 1/13;
+  grid-row: 1/5;
+  @include flex(center,row,space-around);
+  img{
+    @include tamanho(100%,100%);
+    @include bordaTopo(0.3rem)
+  }
+}

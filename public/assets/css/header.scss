@@ -1,0 +1,11 @@
+@import "MPV/mpv.scss";
+.menu {
+    grid-column: 2/12;
+    grid-row: 1/2;
+    @include grid(grid, repeat(4, 1fr), auto);
+    @include flex(center, row, center);
+    a {
+      color: $background-destaque;
+      font-size: 1.2rem;
+    }
+  }

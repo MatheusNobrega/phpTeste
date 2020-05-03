@@ -1,0 +1,47 @@
+@import "style.scss";
+
+.acesso {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  background: $background-destaque;
+  border: solid 0.1rem $borda-cor-padrao;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  @include flex(center, row, space-around);
+  .cadastro {
+    @include flex(center, row, space-around);
+    width: 100%;
+    .titulo {
+      @include tamanho(3.12rem, 100%);
+      padding: 0 1rem;
+      @include flex(center, row, space-between);
+      @media (max-width: 724px) {
+        @include flex(center, row, center);
+      }
+    }
+    .campo {
+      @include tamanho(2.5rem, 50%);
+      @media (max-width: 724px) {
+        width: 100%;
+      }
+      padding: 0 1rem;
+      @include flex(center, row, space-between);
+      label {
+        color: $azulCestari;
+        font-size: 1.1rem;
+      }
+      input, select {
+        width: 60%;
+      }
+    }
+  }
+  .opcoes {
+    @include flex(center, column, space-around);
+    @include tamanho(6.25rem, 100%);
+    button {
+      background-color: $azulCestari;
+      color: $background-destaque;
+    }
+  }
+}

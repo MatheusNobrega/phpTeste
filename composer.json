@@ -1,0 +1,19 @@
+{
+    "name": "weg/projeto-ia",
+    "description": "TCC Fatec",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "ia\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/orm": "^2.7"
+    },
+    "authors": [
+        {
+            "name": "Matheus Nobrega",
+            "email": "matheus.adao.nobrega@gmail.com"
+        }
+    ]
+}

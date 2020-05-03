@@ -1,0 +1,93 @@
+@import "style.scss";
+
+.aplicacao {
+  grid-row: 2/4;
+  grid-column: 1/13;
+  background: $background-destaque;
+  border: solid 0.1rem $borda-cor-padrao;
+  @include flex(center, row, space-around);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+}
+
+.titulo {
+  @include tamanho(2.5rem, 100%);
+  @include flex(center, row, space-between);
+  padding: 0 1rem;
+  @media (max-width: 300px) {
+    font-size: 0.8rem;
+  }
+  i {
+    display: none;
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+  }
+}
+
+.dadosAplicacao {
+  width: 100%;
+  @include flex(center, row, space-around);
+  @media (max-width: 1024px) {
+    .titulo {
+      border-bottom: solid 0.1rem $borda-cor-padrao;
+    }
+  }
+  .camposAplicacao {
+    width: 100%;
+    @include flex(center, row, space-around);
+    .campo {
+      @include flex(center, row, space-between);
+      @media (max-width: 330px) {
+        @include flex(center, column, space-around);
+      }
+      padding: 0 1rem;
+      @include tamanho(4.68rem, 50%);
+      @media (max-width: 724px) {
+        width: 100%;
+      }
+      input,
+      select {
+        width: 35%;
+        @media (max-width: 330px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.calculos {
+  @include flex(center, row, space-around);
+  // width: 30%;
+  width: 100%;
+  @media (max-width: 1024px) {
+    // width: 100%;
+    .titulo {
+      border-top: solid 0.1rem $borda-cor-padrao;
+      border-bottom: solid 0.1rem $borda-cor-padrao;
+    }
+  }
+  .calculosAplicacao {
+    width: 100%;
+    @include flex(center, row, space-around);
+    .calculo {
+      @include flex(center, row, space-between);
+      @media (max-width: 330px) {
+        @include flex(center, column, space-around);
+      }
+      padding: 0 1rem;
+      @include tamanho(4.68rem, 50%);
+      @media (max-width: 724px) {
+        width: 100%;
+      }
+      input {
+        width: 40%;
+        @media (max-width: 330px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

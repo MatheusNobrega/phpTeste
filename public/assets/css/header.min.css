@@ -1,0 +1,1 @@
+.menu{grid-column:2/12;grid-row:1/2;display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;flex-direction:row}.menu a{color:#fafaf7;font-size:1.2rem}

@@ -1,0 +1,41 @@
+$borda-cor-padrao: #c8d0c9;
+$background-destaque: #fafaf7;
+$background-cinza:#e9f0ea;
+$azulCestari: #115d94;
+
+@mixin flex($alignItems: center, $flexDirection: row, $justifyContent: space-around) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+%flexPadrao {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@mixin grid($display, $colunas, $linhas) {
+  display: $display;
+  grid-template-columns: $colunas;
+  grid-template-rows: $linhas;
+}
+
+@mixin tamanho($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin marginPadding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin bordaTopo($valor) {
+  border-top-left-radius: $valor;
+  border-top-right-radius: $valor;
+}
